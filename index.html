@@ -7,7 +7,8 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.1.0/tabletop.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.1.0/tabletop.min.js"></script>
+  <script src="sheetsee.js"></script>
   <title>Sheetsee demo</title>
   <meta name="description" content="" />
   <meta name="author" content="benjamin" />
@@ -17,6 +18,23 @@
 </head>
 
 <body>
-  
+	<div id="placeholder"></div>
+
+	<script id="placeholder" type="text/html">
+    	<!-- map will go here --> 
+
+	</script>
+
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var URL = "1GcTwGGYmFxC63fDH8beLXXIjODd3yKL4Txn0XpOKnAUE"
+			Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
+		})
+		function myData(data) {
+			alert("Hello world!");
+		}
+	</script>
+	
 </body>
 </html>
